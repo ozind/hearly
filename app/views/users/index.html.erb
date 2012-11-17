@@ -1,0 +1,5 @@
+<h1>Users data recieved from Pingly</h1>
+<hr/>
+<% @users.each do |u| %>
+    <ul><%= u.first_name %>, <%= u.last_name %>, <%= u.email %> </ul>
+<% end %>
