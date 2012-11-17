@@ -3,3 +3,19 @@
 <% @users.each do |u| %>
     <ul><%= u.first_name %>, <%= u.last_name %>, <%= u.email %> </ul>
 <% end %>
+
+
+<hr/>
+
+<div class="placeholder">
+    <li class="text">This message should be replaced</li>
+</div>
+
+<%= link_to_function "send", "send();" %>
+<script>
+   function send(){PUBNUB.publish({
+       channel : "hello_world",
+       message : "This is a test."
+   })}
+</script>
+
