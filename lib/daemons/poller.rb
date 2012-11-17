@@ -13,7 +13,7 @@ end
 
 #while($running) do
   EventMachine.run do
-    connection = AMQP.connect(ENV['RABBITMQ_BIGWIG_URL'])
+    connection = AMQP.connect(ENV['AMQP_URL'])
     channel = AMQP::Channel.new(connection)
     exchange = channel.fanout("amq.fanout")
     queue = channel.queue("create.user")
