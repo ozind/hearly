@@ -8,14 +8,7 @@
 <hr/>
 
 <div class="placeholder">
-    <li class="text">This message should be replaced</li>
+    <li class="text">This message should be replaced from the channel broadcast</li>
 </div>
 
-<%= link_to_function "send", "send();" %>
-<script>
-   function send(){PUBNUB.publish({
-       channel : "hello_world",
-       message : "This is a test."
-   })}
-</script>
 
